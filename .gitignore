@@ -1,0 +1,14 @@
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+*.log
+*.pid
+*.sqlite3
+
+test.py
+README.md
+conf.ini
