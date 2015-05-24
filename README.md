@@ -4,11 +4,11 @@ getzhihu是一个爬取从问答网站知乎上爬取内容的爬虫
 ##How to use
 ----------
 
-####conf.ini文件说明
-conf.ini文件通过模块ConfigParser.ConfigParser解析, 通过名字就可以知道这个文件一般是放置一些常用的配置信息。  
-比如post信息，header头信息。
+##<a name="code"/>conf.ini文件说明
+```python
+   #conf.ini文件通过模块ConfigParser.ConfigParser解析, 通过名字就可以知道这个文件一般是放置一些常用的配置信息。  
+   #比如post信息，header头信息。
  
-.. code-block:: python
   conf = ConfigParser()  #初始一个ConfigParser对象  
   conf.read('conf.ini')  #读取当前目录下conf.ini文件  
   email = conf.get('account', 'email')   #得到account段中email的value
@@ -25,12 +25,12 @@ conf.ini文件通过模块ConfigParser.ConfigParser解析, 通过名字就可以
 
   type(conf._section['account'])
   <class 'collections.OrderedDict'>
+```
 
 
 
-####代码示例
-.. code-block:: python
-
+##<a name="code"/>代码示例
+```python
   from zhihu import mysession, MyZhihu, Question
 
   #创建一个会话
@@ -59,7 +59,7 @@ conf.ini文件通过模块ConfigParser.ConfigParser解析, 通过名字就可以
   #如果你要指定文件   /home/path/a.txt
   #如果你要指定命令  /home/path/dir/   会在次路径下生成以问题标题为名的文件
   question.save(answers, '/path', 'w')
-
+```
 
 
 
